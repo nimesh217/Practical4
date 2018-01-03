@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kbs.practical4.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Convertor"
+        android:textSize="25sp"
+        android:textColor="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvtitle"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvcurrency"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Enter Amount (In Rs.)"
+        android:layout_below="@id/tvtitle"
+        android:paddingTop="5sp"
+        />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_amount"
+        android:textSize="20sp"
+
+        android:layout_below="@id/tvtitle"
+        android:layout_toRightOf="@id/tvcurrency"
+
+        android:paddingLeft="10sp"
+        android:paddingTop="5sp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/rbtngrpcurrency"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_amount"
+
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbtn_usdollor"
+            android:textSize="20sp"
+            android:text="US DOLLOR"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/et_amount"
+            android:paddingTop="5sp"
+
+            />
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbtn_yen"
+            android:textSize="20sp"
+            android:text="YEN"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rbtn_usdollor"
+            android:paddingTop="5sp"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbtn_ukdollor"
+            android:textSize="20sp"
+            android:text="UK DOLLOR"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rbtn_yen"
+            android:paddingTop="5sp"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbtn_dinhar"
+            android:textSize="20sp"
+            android:text="DINHAR"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/rbtn_ukdollor"
+            android:paddingTop="5sp"
+
+            />
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clear"
+        android:text="CLEAR"
+        android:layout_below="@id/rbtngrpcurrency"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5sp"
+        android:onClick="btn_clear_onClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_convert"
+        android:text="CONVERT"
+        android:paddingTop="5sp"
+        android:layout_toRightOf="@id/btn_clear"
+        android:paddingLeft="10sp"
+        android:layout_below="@id/rbtngrpcurrency"
+        android:onClick="btn_convert_onClick"
+        />
+</RelativeLayout>
